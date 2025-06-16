@@ -45,7 +45,7 @@ export default function Navbar() {
     <>
       <nav className="bg-white shadow-md p-4">
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center" >
             <Link href="/home">
               <Image
                 src="/assets/logo/LogoMeowMart.png"
@@ -53,6 +53,7 @@ export default function Navbar() {
                 width={80}
                 height={80}
                 className="object-fill"
+                style={{ width: "auto", height: "auto" }} // เพิ่มเพื่อรักษาอัตราส่วน
               />
             </Link>
             {/* Desktop Menu */}

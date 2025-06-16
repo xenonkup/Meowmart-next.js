@@ -15,7 +15,7 @@ export default function HomePage() {
   const [activeItem, setActiveItem] = useState(0);
 
   // ตระกร้า
-  const [cart , setCart] = useState("")
+  const [cart, setCart] = useState("")
 
   // ฟังก์ชันเลื่อนแบนเนอร์ไปข้างหน้า
   const nextSlide = () => {
@@ -39,12 +39,12 @@ export default function HomePage() {
 
   const addToCart = (product) => {
     // เข้าถึง product ทั้งหมด จำนวน 1
-    const cartItem = {...product , quantity: 1};
+    const cartItem = { ...product, quantity: 1 };
     //  JSON.parse แปลง JSON String ให้อยู่ในรูปแบบ Object
     const existingCart = JSON.parse(localStorage.getItem("cart") || "[]")
-    const updatedCart = [...existingCart , cartItem]
+    const updatedCart = [...existingCart, cartItem]
     // JSON.stringify คือ แปลง Object ให้อยู่ในรูปแบบเป็น JSON String
-    localStorage.setItem("cart" , JSON.stringify(updatedCart));
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
     setCart(updatedCart)
     alert(`${product.name} ถูกเพิ่มเข้าตระกร้า`)
   }
@@ -54,13 +54,12 @@ export default function HomePage() {
       <main className="min-h-screen"> {/* Main container ให้สูงเต็มหน้าจอ */}
         {/* ส่วนแบนเนอร์ */}
         <section className="relative w-full" data-carousel="slide">
-          <div className="relative h-60 overflow-hidden md:h-150"> {/* ความสูงแบนเนอร์ ปรับใน md เป็น 150 */}
+          <div className="relative h-60 overflow-hidden md:h-150" style={{ position: "relative" }}> {/* ความสูงแบนเนอร์ ปรับใน md เป็น 150 */}
             {Bannerimages.map((banner, index) => (
               <div
                 key={banner.id} // Key สำหรับแต่ละแบนเนอร์
-                className={`absolute w-full h-full transition-opacity duration-700 ease-in-out ${
-                  activeItem === index ? "opacity-100" : "opacity-0" // แสดงเฉพาะแบนเนอร์ที่ active
-                }`}
+                className={`absolute w-full h-full transition-opacity duration-700 ease-in-out ${activeItem === index ? "opacity-100" : "opacity-0" // แสดงเฉพาะแบนเนอร์ที่ active
+                  }`}
               >
                 <Image
                   src={banner.image} // รูปภาพจาก JSON
@@ -100,7 +99,7 @@ export default function HomePage() {
           </button>
         </section>
 
-        {/* ส่วนสินค้าเ */}
+        {/* ส่วนสินค้า */}
         <section className="max-w-7xl mx-auto px-4 py-10">
           <h2 className="text-2xl font-semibold text-[#027373] mb-6 text-center">
             {ShopProductData.title1} {/* หัวข้อจาก JSON */}
@@ -113,11 +112,11 @@ export default function HomePage() {
                 className="group relative block overflow-hidden"
               >
                 <Image
-                  src={product.image} // รูปภาพจาก JSON
-                  alt={product.alt} // คำอธิบายภาพ
+                  src={product.image}
+                  alt={product.alt}
                   width={150}
                   height={150}
-                  className="w-[150px] h-[150px] object-cover rounded transition-all duration-500 group-hover:scale-105 mx-auto" // ภาพขยายเมื่อชี้
+                  className="w-[150px] h-[150px] object-contain rounded transition-all duration-500 group-hover:scale-105 mx-auto"
                 />
                 <div className="relative border border-gray-100 bg-white p-4 flex flex-col min-h-[200px]">
                   <div className="flex items-center justify-between">

@@ -26,6 +26,8 @@ export default function Footer() {
                                     alt="MeowMart Logo"
                                     width={80}
                                     height={80}
+                                    className='object-contain'
+                                    style={{ width: "auto", height: "auto" }}
                                 />
                             </Link>
                             <p className='text-gray-600 text-sm mt-2'>
