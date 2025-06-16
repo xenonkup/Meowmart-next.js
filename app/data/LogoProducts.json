@@ -1,0 +1,41 @@
+{
+    "title": "หมวดหมู่อาหารแมว",
+    "LogoProductsObject": [
+        {
+            "id": 1,
+            "name": "CattayCat",
+            "image" : "/assets/LogoCategory/LogoCatty.png",
+            "alt": "Category 1"
+        },
+        {
+            "id": 2,
+            "name": "Kaniva",
+            "image" : "/assets/LogoCategory/LogoKaniva.jpg",
+            "alt": "Category 2"
+        },
+        {
+            "id": 3,
+            "name": "MeO",
+            "image" : "/assets/LogoCategory/LogoMeO.png",
+            "alt": "Category 3"
+        },
+        {
+            "id": 4,
+            "name": "Purina",
+            "image" : "/assets/LogoCategory/LogoPurina.png",
+            "alt": "Category 4"
+        },
+        {
+            "id": 5,
+            "name": "RoyalCanin",
+            "image" : "/assets/LogoCategory/LogoRoyal.png",
+            "alt": "Category 5"
+        },
+        {
+            "id": 6,
+            "name": "Whiskas",
+            "image" : "/assets/LogoCategory/LogoWhiskas.jpg",
+            "alt": "Category 6"
+        }
+    ]
+}

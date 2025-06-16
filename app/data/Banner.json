@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title" : "Banner 1",
+        "image": "/assets/Banner/banner1.jpg",
+        "alt": "MeowMart Banner 1"
+    },
+    {
+        "id": 2,
+        "title" : "Banner 2",
+        "image": "/assets/Banner/banner2.jpg",
+        "alt": "MeowMart Banner 2"
+    },
+    {
+        "id": 3,
+        "title" : "Banner 3",
+        "image": "/assets/Banner/banner3.jpg",
+        "alt": "MeowMart Banner 3"
+    },
+    {
+        "id": 4,
+        "title" : "Banner 4",
+        "image": "/assets/Banner/banner4.jpg",
+        "alt": "MeowMart Banner 4"
+    },
+    {
+        "id": 5,
+        "title" : "Banner 5",
+        "image": "/assets/Banner/banner5.jpg",
+        "alt": "MeowMart Banner 5"
+    }
+]
