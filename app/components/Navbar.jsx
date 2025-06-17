@@ -50,10 +50,10 @@ export default function Navbar() {
               <Image
                 src="/assets/logo/LogoMeowMart.png"
                 alt="MeowMart Logo"
-                width={80}
-                height={80}
+                width={100}
+                height={100}
                 className="object-fill"
-                style={{ width: "auto", height: "auto" }} // เพิ่มเพื่อรักษาอัตราส่วน
+                style={{ width: "75px", height: "60px" }} // เพิ่มเพื่อรักษาอัตราส่วน
               />
             </Link>
             {/* Desktop Menu */}
