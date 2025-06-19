@@ -9,6 +9,10 @@ import { FaUser } from "react-icons/fa";
 export default function Navbar() {
   // state to manage จัดการเปิดปิดเมนู Mobile
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // state to manage จัดการเปิดปิดเมนู Dropdown
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   // เพิ่ม state สำหรับนับจำนวน
   const [cartCount, setCartCount] = useState(0);
 
@@ -75,15 +79,40 @@ export default function Navbar() {
             </ul>
 
             {/* Shoping Icon */}
-            <div className="hidden md:block relative">
-              <Link href="/cart">
-                <GiShoppingCart className="w-8 h-8 text-[#FF6B6B]" />
-                {cartCount > 0 && (
-                  <span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                    {cartCount}
-                  </span>
+            <div className="hidden md:flex items-center space-x-4">
+              <div className="relative">
+                <Link href="/cart">
+                  <GiShoppingCart className="w-8 h-8 text-[#FF6B6B]" />
+                  {cartCount > 0 && (
+                    <span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                      {cartCount}
+                    </span>
+                  )}
+                </Link>
+              </div>
+              <div className="relative">
+                <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="focus:outline-none"
+                >
+                  <FaUser className="w-8 h-8 text-[#027373] hover:text-orange-500" />
+                </button>
+                {isDropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-10">
+                    <Link
+                      href="/login"
+                      className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-t"
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      href="/login"
+                      className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b"
+                    >
+                      Register
+                    </Link>
+                  </div>
                 )}
-              </Link>
+              </div>
             </div>
 
             {/* Mobile button */}
@@ -98,7 +127,7 @@ export default function Navbar() {
               )}
             </button>
           </div>
-              
+
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden">
