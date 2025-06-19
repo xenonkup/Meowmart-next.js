@@ -8,7 +8,8 @@ import { HiMenu, HiX } from "react-icons/hi";
 export default function Navbar() {
   // state to manage จัดการเปิดปิดเมนู Mobile
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [cartCount, setCartCount] = useState(0); // เพิ่ม state สำหรับนับจำนวน
+  // เพิ่ม state สำหรับนับจำนวน
+  const [cartCount, setCartCount] = useState(0);
 
   // โหลดและอัปเดตจำนวนสินค้าจาก localStorage แบบเรียลไทม์
   useEffect(() => {
@@ -59,16 +60,16 @@ export default function Navbar() {
             {/* Desktop Menu */}
             <ul className="hidden md:flex justify-center items-center space-x-6 text-[#027373] font-medium">
               <li>
-                <Link href="/home" className={activateLink()}>Home</Link>
+                <Link href="/home" className={activateLink(false)}>Home</Link>
               </li>
               <li>
-                <Link href="/products" className={activateLink()}>Products</Link>
+                <Link href="/products" className={activateLink(false)}>Products</Link>
               </li>
               <li>
-                <Link href="/cart" className={activateLink()}>Cart Product</Link>
+                <Link href="/cart" className={activateLink(false)}>Cart Product</Link>
               </li>
               <li>
-                <Link href="#" className={activateLink()}>Blog</Link>
+                <Link href="#" className={activateLink(false)}>Blog</Link>
               </li>
             </ul>
 
@@ -96,22 +97,22 @@ export default function Navbar() {
               )}
             </button>
           </div>
-
+              
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden">
               <ul className="flex flex-col space-y-4 mt-4 text-[#027373] font-medium">
                 <li>
-                  <Link href="/home" className={activateLink()}>Home</Link>
+                  <Link href="/home" className={activateLink(false)}>Home</Link>
                 </li>
                 <li>
-                  <Link href="/products" className={activateLink()}>Products</Link>
+                  <Link href="/products" className={activateLink(false)}>Products</Link>
                 </li>
                 <li>
-                  <Link href="/cart" className={activateLink()}>Cart Product</Link>
+                  <Link href="/cart" className={activateLink(false)}>Cart Product</Link>
                 </li>
                 <li>
-                  <Link href="#" className={activateLink()}>Blog Post</Link>
+                  <Link href="#" className={activateLink(false)}>Blog Post</Link>
                 </li>
                 <li className="relative">
                   <Link href="/cart" className="flex items-center">
