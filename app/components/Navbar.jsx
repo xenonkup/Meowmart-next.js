@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { GiShoppingCart } from "react-icons/gi";
 import { HiMenu, HiX } from "react-icons/hi";
+import { FaUser } from "react-icons/fa";
 
 export default function Navbar() {
   // state to manage จัดการเปิดปิดเมนู Mobile
