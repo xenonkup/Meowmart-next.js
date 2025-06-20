@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import { FaCartPlus } from "react-icons/fa"; // นำเข้าไอคอนรถเข็น
 import Bannerimages from "../../data/Banner.json"; // นำเข้าข้อมูลแบนเนอร์จาก JSON
 import LogoProduct from "../../data/LogoProducts.json"; // นำเข้าข้อมูลหมวดหมู่จาก JSON
-import WhyChooseUs from "../../data/WhyChooseUs.json"; // นำเข้าข้อมูลเหตุผลที่เลือกเรา
 import ShopProductData from "../../data/ShopProduct.json"; // นำเข้าข้อมูลสินค้าจาก JSON
+import WhyChooseUs from "../../data/WhyChooseUs.json"; // นำเข้าข้อมูลเหตุผลที่เลือกเรา
 import Image from "next/image"; // นำเข้า Component รูปภาพจาก Next.js
 import Link from "next/link"; // นำเข้า Component ลิงก์จาก Next.js
 
