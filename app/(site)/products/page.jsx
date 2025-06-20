@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useState } from "react";
+import { useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa";
 import Image from "next/image";
