@@ -5,7 +5,7 @@ import { IoSearch } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-import ShopProductData from "../data/ShopProduct.json";
+import ShopProductData from "../../data/ShopProduct.json";
 
 export default function shopProductPage() {
   // ค้นหา

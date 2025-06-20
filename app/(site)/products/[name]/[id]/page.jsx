@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import Image from "next/image";
-import ShopProductData from "../../../data/ShopProduct.json";
+import ShopProductData from "../../../../data/ShopProduct.json";
 import { useParams } from "next/navigation";
 
 export default function ProductView() {
