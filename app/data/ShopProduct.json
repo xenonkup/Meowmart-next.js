@@ -183,15 +183,6 @@
         },
         {
             "id": 20,
-            "name": "อาหารเม็ด",
-            "description": "With krill Oil And Salmon Oil 2.8 กก. ",
-            "image": "/assets/Products/All-Product/Kaniva/Kaniva10.jpg",
-            "alt": "kaniva 10",
-            "categories": "Kaniva",
-            "price": 300
-        },
-        {
-            "id": 21,
             "name": "อาหารเปียกซอง",
             "description": "ปลาทูน่ามูสผสมนมแพะหน้าปลาโอสำหรับลูกแมว 70 กรัม",
             "image": "/assets/Products/All-Product/Me-O/MeO1.png",
@@ -200,7 +191,7 @@
             "price": 20
         },
         {
-            "id": 22,
+            "id": 21,
             "name": "อาหารเปียกซอง",
             "description": "ปลาทูน่าในเยลลี่ 70 กรัม",
             "image": "/assets/Products/All-Product/Me-O/MeO2.png",
@@ -209,7 +200,7 @@
             "price": 20
         },
         {
-            "id": 23,
+            "id": 22,
             "name": "อาหารเปียกซอง",
             "description": "ปลาทูน่าในเยลลี่ 80 กรัม",
             "image": "/assets/Products/All-Product/Me-O/MeO3.png",
@@ -218,7 +209,7 @@
             "price": 17
         },
         {
-            "id": 24,
+            "id": 23,
             "name": "อาหารเปียกซอง",
             "description": "ปลาซาร์ดีนและปลากระพงในเยลลี่ 80 กรัม",
             "image": "/assets/Products/All-Product/Me-O/MeO4.png",
@@ -227,7 +218,7 @@
             "price": 17
         },
         {
-            "id": 25,
+            "id": 24,
             "name": "อาหารเม็ด",
             "description": "รส ซีฟู้ด",
             "image": "/assets/Products/All-Product/Me-O/MeO5.jpg",
@@ -236,7 +227,7 @@
             "price": 135
         },
         {
-            "id": 26,
+            "id": 25,
             "name": "อาหารเม็ด",
             "description": "รส ปลาทูน่า",
             "image": "/assets/Products/All-Product/Me-O/MeO6.jpg",
@@ -245,7 +236,7 @@
             "price": 135
         },
         {
-            "id": 27,
+            "id": 26,
             "name": "อาหารเม็ด",
             "description": "รส ปลาทู",
             "image": "/assets/Products/All-Product/Me-O/MeO7.jpg",
@@ -254,7 +245,7 @@
             "price": 135
         },
         {
-            "id": 28,
+            "id": 27,
             "name": "อาหารเม็ด",
             "description": "HEALTHY KITTER 1.2 กก.",
             "image": "/assets/Products/All-Product/Purina/Pruina1.jpg",
@@ -263,7 +254,7 @@
             "price": 200
         },
         {
-            "id": 29,
+            "id": 28,
             "name": "อาหารเม็ด",
             "description": "Purina INDOOR ADVANTAGE 3 กก.",
             "image": "/assets/Products/All-Product/Purina/Purina2.jpg",
@@ -272,7 +263,7 @@
             "price": 350
         },
         {
-            "id": 30,
+            "id": 29,
             "name": "อาหารเม็ด",
             "description": "Purina Friskies Kitten discoveries 1 กก.",
             "image": "/assets/Products/All-Product/Purina/Purina3.webp",
@@ -281,7 +272,7 @@
             "price": 200
         },
         {
-            "id": 31,
+            "id": 30,
             "name": "อาหารเม็ด",
             "description": "Purina Friskies Seafood sensations 1 กก.",
             "image": "/assets/Products/All-Product/Purina/Purina4.jpg",
@@ -290,7 +281,7 @@
             "price": 200
         },
         {
-            "id": 32,
+            "id": 31,
             "name": "อาหารเม็ด",
             "description": "ROYAL CANIN REGULAR SENSIBLE 1.5 กก.",
             "image": "/assets/Products/All-Product/Royal/Royal1.jpg",
@@ -299,7 +290,7 @@
             "price": 1000
         },
         {
-            "id": 33,
+            "id": 32,
             "name": "อาหารเม็ด",
             "description": "ROYAL CANIN CARE HAIRBALL 1.3 กก.",
             "image": "/assets/Products/All-Product/Royal/Royal2.png",
@@ -308,7 +299,7 @@
             "price": 1300
         },
         {
-            "id": 34,
+            "id": 33,
             "name": "อาหารเม็ด",
             "description": "ROYAL CANIN REGULAR STERILISED 1.3 กก.",
             "image": "/assets/Products/All-Product/Royal/Royal3.jpg",
@@ -317,7 +308,7 @@
             "price": 1200
         },
         {
-            "id": 35,
+            "id": 34,
             "name": "อาหารเม็ด",
             "description": "ROYAL CANIN CARE HAIR&SKIN 1.5 กก.",
             "image": "/assets/Products/All-Product/Royal/Royal4.png",
@@ -326,7 +317,7 @@
             "price": 1400
         },
         {
-            "id": 36,
+            "id": 35,
             "name": "อาหารเม็ด",
             "description": "Whiskas Tuna Flavour 1.2 กก.",
             "image": "/assets/Products/All-Product/Whiskas/Whiskas1.png",
@@ -335,7 +326,7 @@
             "price": 130
         },
         {
-            "id": 37,
+            "id": 36,
             "name": "อาหารเปียกซอง",
             "description": "Whiskas MACKEREL FLAVOUR รสปลาทู 80 กรัม",
             "image": "/assets/Products/All-Product/Whiskas/Whiskas2.png",
@@ -344,7 +335,7 @@
             "price": 20
         },
         {
-            "id": 38,
+            "id": 37,
             "name": "อาหารเม็ด",
             "description": "Whiskas Junior ปลาทะเล 1.1 กก.",
             "image": "/assets/Products/All-Product/Whiskas/Whiskas3.png",
@@ -353,7 +344,7 @@
             "price": 120
         },
         {
-            "id": 39,
+            "id": 38,
             "name": "อาหารเปียกซอง",
             "description": "Whiskas Junior รสปลาทู 80 กรัม",
             "image": "/assets/Products/All-Product/Whiskas/Whiskas4.png",
