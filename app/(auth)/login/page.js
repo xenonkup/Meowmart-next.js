@@ -1,12 +1,5 @@
 "use client" 
 
-// สำหรับล็อกอินด้วยอีเมลและรหัสผ่าน
-import { signInWithEmailAndPassword } from "firebase/auth";
-// firebase Auth กล่องเครื่องมือ ยืนยันตัวตนหรือล็อคอิน
-import { auth } from "@/app/lib/firebase-config";
-import { useState } from "react";
-import Link from "next/link";
-
 export default function LoginPage() {
     return (
         <>
