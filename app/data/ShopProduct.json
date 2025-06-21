@@ -257,7 +257,7 @@
             "id": 30,
             "name": "อาหารเม็ด",
             "description": "Whiskas Tuna Flavour 1.2 กก.",
-            "image": "/assets/Products/All-Product/Whiskas/Whiskas1.png",
+            "image": "/assets/Products/All-Product/Whiskas/Whiskas1.png",  
             "alt": "Whiskas 1",
             "categories": "Whiskas",
             "price": 130
