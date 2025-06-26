@@ -4,7 +4,10 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { GiShoppingCart } from "react-icons/gi";
 import { HiMenu, HiX } from "react-icons/hi";
-import { FaUserCircle } from "react-icons/fa"; // เปลี่ยนเป็น FaUserCircle
+import { FaUserCircle } from "react-icons/fa";
+import { signOut } from "firebase/auth"; // เพิ่ม signOut
+import { auth } from "../lib/firebase-config"; // นำเข้า auth
+import { useRouter } from "next/navigation"; // นำเข้า useRouter
 
 export default function Navbar() {
   // state to manage จัดการเปิดปิดเมนู Mobile
@@ -15,6 +18,8 @@ export default function Navbar() {
 
   // เพิ่ม state สำหรับนับจำนวน
   const [cartCount, setCartCount] = useState(0);
+
+  const router = useRouter(); // ใช้สำหรับการนำทาง
 
   // โหลดและอัปเดตจำนวนสินค้าจาก localStorage แบบเรียลไทม์
   useEffect(() => {
@@ -45,6 +50,18 @@ export default function Navbar() {
     return isActive
       ? "bg-gray-300 bg-opacity-60 rounded px-3 py-2"
       : "hover:bg-gray-300 hover:bg-opacity-60 rounded px-3 py-2 hover:text-orange-500 cursor-pointer";
+  };
+
+  // ฟังก์ชันสำหรับจัดการ Logout
+  // เมื่อผู้ใช้คลิกปุ่ม Logout จะเรียกใช้ signOut จาก Firebase
+  const handleLogout = async () => {
+    try {
+      await signOut(auth); // ออกจากระบบ
+      setIsDropdownOpen(false); // ปิด Dropdown หลัง Logout
+      router.push("/"); // กลับไปหน้า แรก
+    } catch (error) {
+      console.error("Error during logout:", error);
+    }
   };
 
   return (
@@ -109,18 +126,37 @@ export default function Navbar() {
                 </button>
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-20">
-                    <Link
-                      href="/login"
-                      className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-t"
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      href="/login"
-                      className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b"
-                    >
-                      Register
-                    </Link>
+                    {auth.currentUser ? (
+                      <>
+                        <button
+                          onClick={handleLogout}
+                          className="block w-full text-left px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b"
+                        >
+                          Logout
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <Link
+                          href="/login"
+                          className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-t"
+                        >
+                          Login
+                        </Link>
+                        <Link
+                          href="/register"
+                          className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b"
+                        >
+                          Register
+                        </Link>
+                        <Link
+                          href="/reset-password"
+                          className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b"
+                        >
+                          Reset-password
+                        </Link>
+                      </>
+                    )}
                   </div>
                 )}
               </div>
@@ -142,7 +178,7 @@ export default function Navbar() {
           {/* Mobile Menu */}
           <div
             className={`md:hidden overflow-hidden transition-max-height duration-300 ease-in-out ${
-              isMenuOpen ? "max-h-96" : "max-h-0"
+              isMenuOpen ? "max-h-120" : "max-h-0"
             }`}
           >
             <ul className="flex flex-col space-y-4 mt-4 text-[#027373] font-medium">
@@ -189,18 +225,37 @@ export default function Navbar() {
                 </button>
                 {isDropdownOpen && (
                   <div className="mt-2 w-full bg-white border rounded shadow-lg z-20">
-                    <Link
-                      href="/login"
-                      className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-t w-full"
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      href="/login"
-                      className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b w-full"
-                    >
-                      Register
-                    </Link>
+                    {auth.currentUser ? (
+                      <>
+                        <button
+                          onClick={handleLogout}
+                          className="block text-left px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b w-full"
+                        >
+                          Logout
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <Link
+                          href="/login"
+                          className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-t w-full"
+                        >
+                          Login
+                        </Link>
+                        <Link
+                          href="/register"
+                          className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b w-full"
+                        >
+                          Register
+                        </Link>
+                        <Link
+                          href="/reset-password"
+                          className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b"
+                        >
+                          Reset-password
+                        </Link>
+                      </>
+                    )}
                   </div>
                 )}
               </li>
