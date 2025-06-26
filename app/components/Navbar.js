@@ -149,6 +149,12 @@ export default function Navbar() {
                         >
                           Register
                         </Link>
+                        <Link
+                          href="/reset-password"
+                          className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b"
+                        >
+                          Reset-password
+                        </Link>
                       </>
                     )}
                   </div>
@@ -172,7 +178,7 @@ export default function Navbar() {
           {/* Mobile Menu */}
           <div
             className={`md:hidden overflow-hidden transition-max-height duration-300 ease-in-out ${
-              isMenuOpen ? "max-h-96" : "max-h-0"
+              isMenuOpen ? "max-h-120" : "max-h-0"
             }`}
           >
             <ul className="flex flex-col space-y-4 mt-4 text-[#027373] font-medium">
@@ -241,6 +247,12 @@ export default function Navbar() {
                           className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b w-full"
                         >
                           Register
+                        </Link>
+                        <Link
+                          href="/reset-password"
+                          className="block px-4 py-2 text-[#027373] hover:bg-gray-100 rounded-b"
+                        >
+                          Reset-password
                         </Link>
                       </>
                     )}
